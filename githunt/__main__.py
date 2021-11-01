@@ -49,6 +49,7 @@ def search(language, date, fmt):
     query += f"+language:{language}" if language else ""
     url = f"{API_URL}?q={query}&sort=stars&order=desc"
     repositories = requests.get(url).json()
+    print("kosi")
     beautify(repositories["items"], fmt)
 
 
